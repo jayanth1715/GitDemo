@@ -6,21 +6,21 @@ from typing import Union, Optional
 __version__ = "0.1.0"
 
 
-Number = Union[int, float]
+Num = Union[int, float]
 
 
 class Calculator:
 	"""Simple calculator supporting basic arithmetic."""
-	def add(self, a: Number, b: Number) -> Number:
+	def add(self, a: Num, b: Num) -> Num:
 		return a + b
 
-	def sub(self, a: Number, b: Number) -> Number:
+	def sub(self, a: Num, b: Num) -> Num:
 		return a - b
 
-	def mul(self, a: Number, b: Number) -> Number:
+	def mul(self, a: Num, b: Num) -> Num:
 		return a * b
 
-	def div(self, a: Number, b: Number) -> Number:
+	def div(self, a: Num, b: Num) -> Num:
 		if b == 0:
 			raise ZeroDivisionError("division by zero")
 		return a / b
@@ -106,7 +106,7 @@ def repl():
 			a = float(sa)
 			b = float(sb)
 		except ValueError:
-			print("Operands must be numbers.")
+			print("Operands must be Nums.")
 			continue
 		try:
 			if op == "add":
